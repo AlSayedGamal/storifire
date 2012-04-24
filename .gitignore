@@ -1,0 +1,16 @@
+/.bundle
+/.rvmrc
+/.sass-cache/
+/config/database.yml
+/config/initializers/quite_assets.rb
+/db/*.db
+/db/*.sqlite3
+/db/schema.rb
+/log/*.log
+/public/system
+/routes.txt
+/tmp
+/vendor/bundle
+*/**/.DS_Store
+generators.txt
+_Gemfile
