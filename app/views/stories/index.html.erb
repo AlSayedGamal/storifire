@@ -1,0 +1,31 @@
+Welcome <%= @user.user_name %>
+<h2>Listing stories</h2>
+<!--Start stories loop -->
+<%= link_to 'New Story', new_story_path %>
+<hr />
+<% @stories.each do |story| %>
+<blockquote>
+<h4>Story name: <%= story.title %></h4>
+<script type='text/javascript'>
+$(documemt).ready(function(){
+
+});
+ShowLMCButton('As <%= story.role.name %>, I\'ll <%= story.need %> so that I can <%= story.goal %>', 'copy')
+</script>
+<div class='options' style='display:none'>
+	<%= link_to 'Edit', edit_story_path(story) %> |
+	<%= link_to 'Destroy', story, confirm: 'Are you sure?', method: :delete %>|
+	<%= link_to 'Image', yumlimg_path(story) %> |
+	<%= link_to 'Role stories', yumlroles_path(story) %> |
+	<%= link_to 'steps', steps_of_path(story) %>
+</div>
+<hr />
+<blockquote><p>As <i><b><%= story.role.name %>,</b></i>
+I'll <u><%= story.need %></u> so that I can <u><%= story.goal %></u>
+</p>
+</blockquote>
+</blockquote>
+<hr />
+<% end %>
+<hr />
+<%= link_to 'New Story', new_story_path %>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  role_id: 1
+  need: MyText
+  goal: MyText
+
+two:
+  title: MyString
+  role_id: 1
+  need: MyText
+  goal: MyText

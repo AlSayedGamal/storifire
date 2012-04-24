@@ -1,0 +1,17 @@
+<h1>Listing steps</h1>
+
+<%= link_to 'New Step', new_step_path %>
+<hr />
+
+<% @steps.each do |step| %>
+<pre>
+  <%= step.kind %> <%= step.doer %> <%= step.verb %> <%= step.body %>
+</pre>
+<p>
+  <%= link_to 'Show', step %> |
+  <%= link_to 'Edit', edit_step_path(step) %> |
+  <%= link_to 'Destroy', step, confirm: 'Are you sure?', method: :delete %>
+</p>
+<% end %>
+<hr />
+<%= link_to 'New Step', new_step_path %>

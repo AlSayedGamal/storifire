@@ -1,0 +1,9 @@
+<pre>
+<% @steps.each do |step| %>
+<%= step.kind %> <%= step.doer %> <%= step.verb %> <%= step.body %>
+<% end %>
+</pre>
+<form action='/stories/savetofile/' method='post'>
+<input type='text' name='path' value="features/<%= @steps.first.story.title %>.feature" />
+<input type='hidden' name='story_id' value="<%= @steps.first.story.id %>" />
+<input type='submit' class="primary btn" value='save'/>

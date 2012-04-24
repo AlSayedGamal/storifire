@@ -1,0 +1,36 @@
+<h1>Listing roles</h1>
+<hr />
+<%= link_to 'Roles', roles_path %> |
+<%= link_to 'New Role', new_role_path %>
+<hr />
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Parent role</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @roles.each do |role| %>
+  
+  <tr>
+    <td><%= role.name %></td>
+    <td>
+      <% if role.parent_role.to_s == '0' %>
+        --
+      <% else %>
+        <% parentRole = @roles.find(role.parent_role) %>
+        <%= parentRole.first.name %>
+      <% end %>
+    </td>
+    <td><%= link_to 'Show', role %></td>
+    <td><%= link_to 'Edit', edit_role_path(role) %></td>
+    <td><%= link_to 'Destroy', role, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<hr />
+<%= link_to 'Roles', roles_map_path %> |
+<%= link_to 'New Role', new_role_path %>

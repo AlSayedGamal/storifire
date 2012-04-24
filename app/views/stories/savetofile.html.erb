@@ -1,0 +1,7 @@
+<% if @result %>
+<span class="label label-success">File written successfully</span>
+<% else %>
+<span class="label label-important">Something went wrong!</span>
+<% end %>
+<br />
+<%= link_to 'back', stories_path %>

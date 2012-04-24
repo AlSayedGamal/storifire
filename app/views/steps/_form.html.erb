@@ -1,0 +1,95 @@
+<%= form_for(@step) do |f| %>
+  <% if @step.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@step.errors.count, "error") %> prohibited this step from being saved:</h2>
+
+      <ul>
+      <% @step.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class='container'>
+  <div class="inlineField field">
+    <%= f.label :type %><br />
+    <select name='step[kind]'>
+      <option valeu='Given'>
+        Given 
+      </option>
+      <option valeu='When'>
+        When
+      </option>
+      <option valeu='Then'>
+        Then
+      </option>
+      <option valeu='And'>
+        And
+      </option>
+    </select>
+  </div>
+  <div class="inlineField field">
+    <%= f.label :doer %><br />
+    <select name='step[doer]'>
+      <option valeu='User'>
+        User
+      </option>
+      <option valeu='I'>
+        I
+      </option>
+    </select>
+  </div>
+  <div class="inlineField field">
+    <%= f.label :verb %><br />
+    <select name='step[verb]'>
+      <option valeu='am on'>
+        am on
+      </option>
+      <option valeu='am on'>
+        is on
+      </option>
+      <option valeu='go to'>
+        go to
+      </option>
+      <option valeu='press'>
+        press
+      </option>
+      <option valeu='follow'>
+        follow
+      </option>
+      <option valeu='fill in the following'>
+        fill in the following
+      </option>
+      <option valeu='should see'>
+        should see
+      </option>
+      <option valeu='choose'>
+        choose
+      </option>
+      <option valeu='check'>
+        check
+      </option>
+      <option valeu='uncheck'>
+        uncheck
+      </option>
+    </select>
+  </div>
+</div>
+  <div class="field">
+    <%= f.label :body %><br />
+    <textarea name='step[body]' cols='7' rows='3'></textarea>
+  </div>
+  <div class="field">
+    <%= f.label :story_id %><br />
+    <select name='step[story_id]'>
+      <% @stories.each do |story| %>
+      <option value='<%= story.id %>'>
+        <%= story.role.name %> :: <%= story.title %>
+      </option>
+      <% end %>
+    </select>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

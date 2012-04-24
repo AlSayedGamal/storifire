@@ -1,0 +1,32 @@
+       steps GET    /steps(.:format)              steps#index
+             POST   /steps(.:format)              steps#create
+    new_step GET    /steps/new(.:format)          steps#new
+   edit_step GET    /steps/:id/edit(.:format)     steps#edit
+        step GET    /steps/:id(.:format)          steps#show
+             PUT    /steps/:id(.:format)          steps#update
+             DELETE /steps/:id(.:format)          steps#destroy
+     stories GET    /stories(.:format)            stories#index
+             POST   /stories(.:format)            stories#create
+   new_story GET    /stories/new(.:format)        stories#new
+  edit_story GET    /stories/:id/edit(.:format)   stories#edit
+       story GET    /stories/:id(.:format)        stories#show
+             PUT    /stories/:id(.:format)        stories#update
+             DELETE /stories/:id(.:format)        stories#destroy
+       roles GET    /roles(.:format)              roles#index
+             POST   /roles(.:format)              roles#create
+    new_role GET    /roles/new(.:format)          roles#new
+   edit_role GET    /roles/:id/edit(.:format)     roles#edit
+        role GET    /roles/:id(.:format)          roles#show
+             PUT    /roles/:id(.:format)          roles#update
+             DELETE /roles/:id(.:format)          roles#destroy
+    projects GET    /projects(.:format)           projects#index
+             POST   /projects(.:format)           projects#create
+ new_project GET    /projects/new(.:format)       projects#new
+edit_project GET    /projects/:id/edit(.:format)  projects#edit
+     project GET    /projects/:id(.:format)       projects#show
+             PUT    /projects/:id(.:format)       projects#update
+             DELETE /projects/:id(.:format)       projects#destroy
+     yumlimg        /stories/image/:id(.:format)  stories#yumlimg
+   yumlroles        /stories/role/:role(.:format) stories#showRole
+    steps_of        /stories/steps/:id(.:format)  stories#steps
+        root        /                             projects#index

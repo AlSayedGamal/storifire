@@ -1,0 +1,12 @@
+<p id="notice"><%= notice %></p>
+<h1><%= @story.first.title %></h1>
+
+<p>As <i><b><%= @story.first.role.name %></b></i> <br />
+I'll <u><%= @story.first.need %></u> so that I can <u><%= @story.first.goal %></u>
+</p>
+
+<%= link_to 'Edit', edit_story_path(@story) %> |
+<%= link_to 'Destroy', @story, confirm: 'Are you sure?', method: :delete %> |
+<%= link_to 'Back', stories_path %> |
+<%= link_to 'Image', yumlimg_path(@story) %> |
+<%= link_to 'Role stories', yumlroles_path(@story) %>

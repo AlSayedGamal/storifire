@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Kind:</b>
+  <%= @step.kind %>
+</p>
+
+<p>
+  <b>Actor:</b>
+  <%= @step.doer %>
+</p>
+<p>
+  <b>Verb:</b>
+  <%= @step.verb %>
+</p>
+<p>
+  <b>Body:</b>
+  <%= @step.body %>
+</p>
+<p>
+  <b>Story_id:</b>
+  <%= @step.story_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_step_path(@step) %> |
+<%= link_to 'Back', steps_path %>
+<%= link_to 'Add another step', new_step_path %>

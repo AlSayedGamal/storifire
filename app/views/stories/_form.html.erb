@@ -1,0 +1,58 @@
+<%= form_for(@story) do |f| %>
+  <% if @story.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@story.errors.count, "error") %> prohibited this story from being saved:</h2>
+
+      <ul>
+      <% @story.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<table>
+  <tr>
+    <td>
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    User role:<br />
+    <select name='story[role_id]'>
+      <% @roles.each do |role| %>
+        <option value = <%= role.id %>> <%= role.name %></option>
+      <% end %>
+    </select>
+  </div>
+</td>
+</tr>
+<tr>
+  <td>
+    <div class="field">
+      <%= f.label :points %><br />
+      <%= f.number_field :points %>
+    </div>
+  </td>
+</tr>
+<tr>
+  <td>
+  <div style="float:left" class="field">
+    <%= f.label :need %><br />
+    <%= f.text_area :need %>
+  </div>
+  <div style="float:left" class="field">
+    <%= f.label :goal %><br />
+    <%= f.text_area :goal %>
+  </div>
+</td>
+</tr>
+<tr>
+  <td>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+</td>
+</tr>
+<% end %>
+</table>
