@@ -1,4 +1,3 @@
-Welcome <%= @user.user_name %>
 <h2>Listing stories</h2>
 <!--Start stories loop -->
 <%= link_to 'New Story', new_story_path %>
@@ -10,9 +9,8 @@ Welcome <%= @user.user_name %>
 $(documemt).ready(function(){
 
 });
-ShowLMCButton('As <%= story.role.name %>, I\'ll <%= story.need %> so that I can <%= story.goal %>', 'copy')
 </script>
-<div class='options' style='display:none'>
+<div class='options'>
 	<%= link_to 'Edit', edit_story_path(story) %> |
 	<%= link_to 'Destroy', story, confirm: 'Are you sure?', method: :delete %>|
 	<%= link_to 'Image', yumlimg_path(story) %> |

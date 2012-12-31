@@ -2,9 +2,9 @@ class StoriesController < ApplicationController
   # GET /stories
   # GET /stories.json
   def index
-    Basecamp.establish_connection!('company.basecamphq.com', 'username', 'password', true)
-    me = Basecamp::Person.me
-    @user = me
+#    Basecamp.establish_connection!('company.basecamphq.com', 'username', 'password', true)
+#    me = Basecamp::Person.me
+#    @user = me
     @stories = Story.includes(:role)
     @steps = Step.includes(:stories)
     respond_to do |format|
