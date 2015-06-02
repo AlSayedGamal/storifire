@@ -94,6 +94,8 @@ GEM
     multi_test (0.1.2)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
+    protected_attributes (1.0.9)
+      activemodel (>= 4.0.1, < 5.0)
     rack (1.6.1)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -168,6 +170,7 @@ DEPENDENCIES
   jquery-rails
   launchy
   libv8
+  protected_attributes
   rails (~> 4.2.1)
   sass-rails (~> 5.0.3)
   sqlite3

@@ -9,6 +9,7 @@ gem 'jquery-rails'
 gem 'sqlite3'
 gem 'libv8'
 gem 'therubyracer'
+gem 'protected_attributes'
 
 
 # Gems used only for assets and not required
