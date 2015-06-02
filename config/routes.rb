@@ -6,11 +6,11 @@ Storifire::Application.routes.draw do
   resources :roles
 
   resources :projects
-  match 'stories/image/:id' => 'stories#yumlimg', :as => :yumlimg
-  match 'stories/role/:role' => 'stories#showRole', :as => :yumlroles
-  match 'stories/steps/:id' => 'stories#steps', :as => :steps_of
-  match 'stories/savetofile/' => 'stories#savetofile', :as => :savetofile
-  match 'roles/map/' => 'roles#map', :as => :roles_map
+  match 'stories/image/:id' => 'stories#yumlimg', :as => :yumlimg, via: [:get]
+  match 'stories/role/:role' => 'stories#showRole', :as => :yumlroles, via: [:get]
+  match 'stories/steps/:id' => 'stories#steps', :as => :steps_of, via: [:get]
+  match 'stories/savetofile/' => 'stories#savetofile', :as => :savetofile, via: [:post]
+  match 'roles/map/' => 'roles#map', :as => :roles_map, via: [:get]
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

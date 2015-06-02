@@ -9,40 +9,40 @@
 # from scratch. The latter is a flawed and unsustainable approach (the more migrations
 # you'll amass, the slower it'll run and the greater likelihood for issues).
 #
-# It's strongly recommended to check this file into your version control system.
+# It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120401180849) do
+ActiveRecord::Schema.define(version: 20120401180849) do
 
-  create_table "projects", :force => true do |t|
+  create_table "projects", force: :cascade do |t|
     t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
-  create_table "roles", :force => true do |t|
+  create_table "roles", force: :cascade do |t|
     t.string   "name"
     t.integer  "parent_role"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
-  create_table "steps", :force => true do |t|
+  create_table "steps", force: :cascade do |t|
     t.string   "kind"
     t.text     "body"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.integer  "story_id"
     t.string   "doer"
     t.string   "verb"
   end
 
-  create_table "stories", :force => true do |t|
+  create_table "stories", force: :cascade do |t|
     t.string   "title"
     t.integer  "role_id"
     t.text     "need"
     t.text     "goal"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.decimal  "points"
   end
 

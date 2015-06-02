@@ -1,4 +1,6 @@
 Storifire::Application.configure do
+  config.eager_load = true
+  config.assets.js_compressor = :uglifier
   # Settings specified here will take precedence over those in config/application.rb
 
   # Code is not reloaded between requests
