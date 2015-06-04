@@ -12,9 +12,7 @@ gem 'protected_attributes'
 
 
 group :assets do
-  gem 'sass-rails', '~> 5.0.3'
   gem 'coffee-rails', '~> 4.1.0'
-  gem 'twitter-bootstrap-rails', '~> 3.2.0'
   gem 'uglifier', '>= 1.0.3'
 end
 
