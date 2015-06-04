@@ -9,7 +9,7 @@ gem 'sqlite3'
 gem 'libv8'
 gem 'therubyracer'
 gem 'protected_attributes'
-
+gem 'twitter-bootstrap-rails', '~> 3.2.0'
 
 group :assets do
   gem 'coffee-rails', '~> 4.1.0'
