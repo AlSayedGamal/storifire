@@ -11,3 +11,16 @@
  *= require_self
  *= require_tree .
 */
+
+
+@media (min-width: 1200px) {
+    .container{
+        max-width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container ul{
+        min-width: 800px;
+    }
+}
