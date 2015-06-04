@@ -37,6 +37,10 @@
                 <li><%= link_to "Roles", roles_path  %></li>
                 <li><%= link_to "Stories", stories_path  %></li>
                 <li><%= link_to "Steps", steps_path  %></li>
+                <% if user_signed_in? %>
+                  <li><%= link_to "logout" , "/users/sign_out", method: :delete  %></li>
+                <% end if %>
+                
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -45,6 +49,8 @@
 
     <div class="container">
       <div class="content">
+       <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
         <div class="row">
            <div class="span9">
               <%= yield %>
