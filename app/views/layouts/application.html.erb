@@ -52,9 +52,9 @@
             <li><%= link_to "Roles", roles_path  %></li>
             <li><%= link_to "Stories", stories_path  %></li>
             <li><%= link_to "Steps", steps_path  %></li>
-            <% if user_signed_in? %>
-              <li><%= link_to "logout" , "/users/sign_out", method: :delete  %></li>
-            <% end if %>
+            <li class="pull-right">
+              <%= link_to "logout" , "/users/sign_out", method: :delete  if user_signed_in? %>
+            </li>
           </ul>
         </div>
       </div>
